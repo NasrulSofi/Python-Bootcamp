@@ -1,20 +1,34 @@
-grades = [
-    ("Alice", "Math", 85),
-    ("Bob", "Science", 92),
-    ("Alice", "Science", 78),
-    ("Charlie", "Math", 90),
-    ("Bob", "Math", 88),
-    ("Alice", "English", 95)]
+student_records = {
+    "student_001": {
+        "name": "John",
+        "age": 19,
+        "major": "Computer Science",
+        "grades": [85, 92, 78]
+    },
 
-unique_students = set()
-unique_subjects = set()
+    "student_002": {
+        "name": "Sarah",
+        "age": 20,
+        "major": "Biology",
+        "grades": [90, 88, 95]
+    }
+}       
 
-for item in grades:
-    student_name = item[0]
-    subject_name = item[1]
-    
-    unique_students.add(student_name)
-    unique_subjects.add(subject_name)
+# new data for student_003
+new_student_data = {
+    "name": "Mike",
+    "age": 18,
+    "major": "Mathematics",
+    "grades": [82, 79, 91]
+}
+# Adding new student record for student_003
+student_records["student_003"] = new_student_data
+student_records["student_001"]["age"] = 20
 
-print("Unique Students:", unique_students)
-print("Unique Subjects:", unique_subjects)
+for student_id in student_records:
+    name = student_records[student_id]["name"]
+    major = student_records[student_id]["major"]
+    print(f"Student ID:{student_id}, Name: {name}, Major: {major}")
+
+
+
