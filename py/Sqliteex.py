@@ -1,7 +1,7 @@
 import sqlite3
 
 class DatabaseManager:
-    def __init__(self, db_name='example.db'):
+    def __init__(self, db_name='SqliteEX.db'):
         self.db_name = db_name
         self.init_database()
 
