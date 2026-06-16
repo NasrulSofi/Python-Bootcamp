@@ -10,7 +10,7 @@ load_dotenv()
 mongo_uri = os.getenv('MONGODB_ATLAS_CLUSTER_URI')
 
 class DatabaseManager:
-    def __init__(self, db_name='Mongo_dbEX', connection_string=mongo_uri):
+    def __init__(self, db_name='Mongodbex', connection_string=mongo_uri):
         self.client = MongoClient(connection_string)
         self.db = self.client[db_name]
         self.users_collection = self.db.users
